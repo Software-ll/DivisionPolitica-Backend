@@ -1,0 +1,14 @@
+[
+    {"nombre": "Argentina"},
+    {"nombre": "Bolivia"},
+    {"nombre": "Brasil"},
+    {"nombre": "Chile"},
+    {"nombre": "Colombia"},
+    {"nombre": "Ecuador"},
+    {"nombre": "Guyana"},
+    {"nombre": "Paraguay"},
+    {"nombre": "Perú"},
+    {"nombre": "Surinam"},
+    {"nombre": "Uruguay"},
+    {"nombre": "Venezuela"}
+]
