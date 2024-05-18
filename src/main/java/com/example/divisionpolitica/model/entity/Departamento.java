@@ -19,6 +19,7 @@ public class Departamento {
     
     private String nombre;
     
+    //Realizar relacion
     @Column(name = "id_pais")
     private Long idPais;
     
