@@ -1,33 +1,38 @@
 package com.example.divisionpolitica.model.entity;
 
-import org.antlr.v4.runtime.misc.NotNull;
+import java.util.Set;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Entity
 @Data
-@Table(name = "tbl_departamento")
-public class Departamento {
-
+@Entity
+@Table(name = "tbl_sector")
+public class Sector {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String nombre;
-    
+    private String numeroCasa;
 
     @ManyToOne
-    @JoinColumn(name = "id_pais", referencedColumnName = "id", nullable = false)
-    private Pais pais;
-    
+    @JoinColumn(name = "ciudad_id")
+    private Ciudad ciudad;
+
+    @ManyToOne
+    @JoinColumn(name = "sector_padre_id")
+    private Sector sectorPadre;
+
+    @OneToMany(mappedBy = "sectorPadre", cascade = CascadeType.ALL)
+    private Set<Sector> subSectores;
+
+  
 }
-
-

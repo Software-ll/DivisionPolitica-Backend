@@ -19,7 +19,7 @@ public class Ciudad {
 
     @Setter
     @ManyToOne
-    @JoinColumn(name = "departamento_id",referencedColumnName = "id")
+    @JoinColumn(name = "departamento_id",referencedColumnName = "id", nullable = false)
     private Departamento departamento;
 }
 
