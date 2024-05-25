@@ -2,6 +2,7 @@ package com.example.divisionpolitica.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 @Entity
